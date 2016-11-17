@@ -1,8 +1,8 @@
 <html>
 <!- - 
 Program Name:   Seminole Movie Connection
-Author: 
-Date: 
+Author:     Heather Kostrna
+Date:       11/17/2016
 Filename:   Movie.html
 - ->
     
@@ -31,14 +31,22 @@ Filename:   Movie.html
 <div class="container">
   <h1 class="text-primary">Movie Information:</h1>
     <div class="list-group">
+       
         <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Movie Title:</h3>
             <p class="list-group-item-text lead text-primary" id="Title"> </p>
         </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Genre:</h3>
+            <p class="list-group-item-text lead text-primary" id="Genre">  </p>
+            </a>
+            
         <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Rated:</h3>
             <p class="list-group-item-text lead text-primary" id="Rated"> </p>
         </a>
+        
         <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Actors:</h3>
             <p class="list-group-item-text lead text-primary" id="Actors">  </p>
@@ -52,8 +60,46 @@ Filename:   Movie.html
         <a href="#" class="list-group-item">
             <h3 class="list-group-item-heading">Release Date:</h3>
             <p class="list-group-item-text lead text-primary" id="Released">  </p>
-        </a> 
-
+        </a>
+        
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Runtime:</h3>
+            <p class="list-group-item-text lead text-primary" id="Runtime">  </p>
+        </a>
+        
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Director:</h3>
+            <p class="list-group-item-text lead text-primary" id="Director">  </p>
+        </a>
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Writer:</h3>
+            <p class="list-group-item-text lead text-primary" id="Writer">  </p>
+        </a>
+        
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Language:</h3>
+            <p class="list-group-item-text lead text-primary" id="Language">  </p>
+        </a>
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Country:</h3>
+            <p class="list-group-item-text lead text-primary" id="Country">  </p>
+        </a>
+        
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Awards:</h3>
+            <p class="list-group-item-text lead text-primary" id="Awards">  </p>
+        </a>
+        
+         <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">imdbRating:</h3>
+            <p class="list-group-item-text lead text-primary" id="imdbRating">  </p>
+        </a>
+        
+        <a href="#" class="list-group-item">
+            <h3 class="list-group-item-heading">Poster:</h3>
+            <p class="list-group-item-text lead text-primary" id="Poster">  </p>
+        </a>
+        
     </div>
 </div> 
     <script>
@@ -67,10 +113,19 @@ Filename:   Movie.html
                 })
                 .done(function(json){
                      $('#Title').html(json.Title);
+                     $('#Genre').html(json.Genre);
                      $('#Rated').html(json.Rated);
                      $('#Actors').html(json.Actors);
                      $('#Plot').html(json.Plot);
                      $('#Released').html(json.Released);
+                     $('#Runtime').html(json.Runtime);
+                     $('#Director').html(json.Director);
+                     $('#Writer').html(json.Writer);
+                     $('#Language').html(json.Language);
+                     $('#Country').html(json.Country);
+                     $('#Awards').html(json.Awards);
+                     $('#imdbRating').html(json.imdbRating);
+                     $('#Poster').html(json.Poster);
                 })
                 .fail(function() {
                       alert("Posting failed.");              
